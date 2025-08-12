@@ -1,0 +1,12 @@
+tronto_stages:
+  - caring_about
+  - taking_care_of
+  - care_giving
+  - care_receiving
+  - caring_with
+subthemes:
+  - collective_iftar
+  - border_waiting
+  - shelterless_birth
+  - poetry_consolation
+coding_guidelines: "Double coding; target Cohen's kappa ≥ 0.70"

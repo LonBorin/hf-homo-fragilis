@@ -1,0 +1,29 @@
+name: hf
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - pip
+  - geopandas
+  - shapely
+  - rtree
+  - pyogrio
+  - rasterio
+  - h3-py
+  - pandas
+  - numpy
+  - scipy
+  - statsmodels
+  - scikit-learn
+  - pyarrow
+  - jupyterlab
+  - pytest
+  - black
+  - isort
+  - pre-commit
+  - r-base
+  - r-tidyverse
+  - quarto
+  - pip:
+      - pydantic
+      - rioxarray
+      - dvc[ssh,s3,gdrive]

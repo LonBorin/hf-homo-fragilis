@@ -1,0 +1,34 @@
+<QGISModelerModel version="3.34">
+  <group>HF</group>
+  <name>HF SOI Pipeline</name>
+  <modelVariables/>
+  <components>
+    <component type="parameters">
+      <parameter name="facilities" type="layer" geometry="Point" description="Facilities (processed)"/>
+      <parameter name="incidents" type="layer" geometry="Point" description="Incidents (processed)"/>
+      <parameter name="hexbins" type="layer" geometry="Polygon" description="Hexbins"/>
+    </component>
+    <component type="algorithm" name="native:buffer" id="buf380">
+      <param name="INPUT" ref="facilities"/>
+      <param name="DISTANCE" value="380"/>
+      <param name="SEGMENTS" value="8"/>
+      <param name="END_CAP_STYLE" value="0"/>
+      <param name="JOIN_STYLE" value="0"/>
+      <output name="OUTPUT" sink="TEMPORARY_OUTPUT"/>
+    </component>
+    <component type="algorithm" name="native:joinattributesbylocation" id="join380">
+      <param name="INPUT" ref="incidents"/>
+      <param name="JOIN" ref="buf380:OUTPUT"/>
+      <param name="PREDICATE" value="0"/>
+      <param name="SUMMARY" value="0"/>
+      <output name="OUTPUT" sink="TEMPORARY_OUTPUT"/>
+    </component>
+    <component type="algorithm" name="native:joinattributesbylocation" id="tohex">
+      <param name="INPUT" ref="hexbins"/>
+      <param name="JOIN" ref="join380:OUTPUT"/>
+      <param name="PREDICATE" value="0"/>
+      <param name="SUMMARY" value="1"/>
+      <output name="OUTPUT" sink="TEMPORARY_OUTPUT"/>
+    </component>
+  </components>
+</QGISModelerModel>

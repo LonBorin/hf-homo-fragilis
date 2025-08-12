@@ -1,0 +1,59 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="HomoFragilis" version="3.34" readOnly="0" saveUserFull="0" simplifyDrawingHints="1" simplifyMaxScale="1" simplifyLocal="1" simplifyDrawingTol="1" simplifyAlgorithm="0" minScale="1e+08" maxScale="1" hasMacros="0">
+  <homePath>.</homePath>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=utm +zone=36 +datum=WGS84 +units=m +no_defs</proj4>
+      <srsid>EPSG:32636</srsid>
+      <authid>EPSG:32636</authid>
+      <description>WGS 84 / UTM zone 36N</description>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group name="Layers" expanded="1">
+    <layer-tree-layer name="Hexbins" expanded="1" checked="1" id="hexbins">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer name="Facilities" expanded="1" checked="1" id="facilities">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer name="Incidents" expanded="1" checked="1" id="incidents">
+      <customproperties/>
+    </layer-tree-layer>
+  </layer-tree-group>
+  <projectlayers>
+    <maplayer type="vector" name="Hexbins" hasScaleBasedVisibilityFlag="0" geometry="Polygon">
+      <id>hexbins</id>
+      <datasource>../data/processed/hexbins.geojson</datasource>
+      <provider>ogr</provider>
+      <crs>
+        <spatialrefsys>
+          <authid>EPSG:4326</authid>
+        </spatialrefsys>
+      </crs>
+    </maplayer>
+    <maplayer type="vector" name="Facilities" hasScaleBasedVisibilityFlag="0" geometry="Point">
+      <id>facilities</id>
+      <datasource>../data/processed/facilities.geojson</datasource>
+      <provider>ogr</provider>
+      <crs>
+        <spatialrefsys>
+          <authid>EPSG:4326</authid>
+        </spatialrefsys>
+      </crs>
+    </maplayer>
+    <maplayer type="vector" name="Incidents" hasScaleBasedVisibilityFlag="0" geometry="Point">
+      <id>incidents</id>
+      <datasource>../data/processed/incidents.geojson</datasource>
+      <provider>ogr</provider>
+      <crs>
+        <spatialrefsys>
+          <authid>EPSG:4326</authid>
+        </sprefsys>
+      </crs>
+    </maplayer>
+  </projectlayers>
+  <projectMetadata>
+    <author>Homo Fragilis</author>
+    <abstract>QGIS project template. Load styles from outputs/maps/styles/*</abstract>
+  </projectMetadata>
+</qgis>
